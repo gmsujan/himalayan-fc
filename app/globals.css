@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'DM Sans', sans-serif;
+  --green-primary: #1e6e1e;
+  --green-light: #2d8a2d;
+  --green-pale: #f0faf0;
+  --cream: #f8f5f0;
+  --charcoal: #1a1a1a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--cream);
+  color: var(--charcoal);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+}
+
+/* Nav link underline animation */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--green-primary);
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Mountain texture background */
+.mountain-bg {
+  background-image: 
+    radial-gradient(ellipse at 20% 80%, rgba(30, 110, 30, 0.05) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(30, 110, 30, 0.04) 0%, transparent 50%);
+}
+
+/* Card hover */
+.card-hover {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* Green button */
+.btn-primary {
+  background: var(--green-primary);
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 2px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  transition: background 0.2s ease, transform 0.15s ease;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+}
+.btn-primary:hover {
+  background: #165516;
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--green-primary);
+  padding: 0.75rem 2rem;
+  border-radius: 2px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  border: 2px solid var(--green-primary);
+  transition: all 0.2s ease;
+  display: inline-block;
+  cursor: pointer;
+}
+.btn-outline:hover {
+  background: var(--green-primary);
+  color: white;
+}
+
+/* Section divider */
+.section-label {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--green-primary);
+  margin-bottom: 0.5rem;
+}
+
+/* Form input */
+.form-input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 1.5px solid #d1d5db;
+  border-radius: 2px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  background: white;
+  transition: border-color 0.2s;
+  outline: none;
+}
+.form-input:focus {
+  border-color: var(--green-primary);
+}
+
+/* Hero diagonal clip */
+.hero-clip {
+  clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+}
+
+/* Stripe pattern */
+.stripe-accent {
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(30,110,30,0.03),
+    rgba(30,110,30,0.03) 1px,
+    transparent 1px,
+    transparent 8px
+  );
+}
+
+/* Animate fade-up */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up {
+  animation: fadeUp 0.6s ease forwards;
+}
+.fade-up-delay-1 { animation-delay: 0.1s; opacity: 0; }
+.fade-up-delay-2 { animation-delay: 0.2s; opacity: 0; }
+.fade-up-delay-3 { animation-delay: 0.3s; opacity: 0; }
+.fade-up-delay-4 { animation-delay: 0.4s; opacity: 0; }

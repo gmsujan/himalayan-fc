@@ -27,7 +27,7 @@ export default function HomePage() {
               MOUNTAINS
             </h1>
             <p className="text-gray-600 text-lg leading-relaxed mb-8 max-w-md fade-up fade-up-delay-2">
-              Himalayan FC is more than a football club — it&apos;s a community of passion, culture, 
+              Himalayan FC is more than a football club - it&apos;s a community of passion, culture, 
               and shared pride. Join us as we build something extraordinary in Hamilton.
             </p>
             <div className="flex flex-wrap gap-4 fade-up fade-up-delay-3">
@@ -48,10 +48,10 @@ export default function HomePage() {
                 style={{background:'#1e6e1e'}}
               />
               <Image
-                src="/logo.png"
+                src="/mensfirst/team.jpg"
                 alt="Himalayan FC Logo"
-                width={420}
-                height={420}
+                width={1020}
+                height={1020}
                 className="relative z-10 drop-shadow-2xl"
                 priority
               />

@@ -36,7 +36,7 @@ export default function AboutPage() {
             </p>
             <p className="text-gray-600 leading-relaxed mb-4">
               The club takes inspiration from the majesty and resilience of the Himalayan 
-              mountains — qualities we seek to embody on and off the pitch. Just as the 
+              mountains - qualities we seek to embody on and off the pitch. Just as the 
               mountains stand tall through any weather, we stand together as a community.
             </p>
             <p className="text-gray-600 leading-relaxed">
